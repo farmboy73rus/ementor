@@ -1,0 +1,29 @@
+@font-face
+    font-family: 'ementor'
+    src: url('/media/fonts/ementor.eot')
+    src: url('/media/fonts/ementor.eot') format('embedded-opentype')
+    src: url('/media/fonts/ementor.ttf') format('truetype')
+    src: url('/media/fonts/ementor.woff') format('woff')
+    src: url('/media/fonts/ementor.svg#ementor') format('svg')
+    font-weight: normal
+    font-style: normal
+    font-display: block
+
+[class^='icon-'], [class*=' icon-']
+    font-family: 'ementor' !important
+    speak: never
+    font-style: normal
+    font-weight: normal
+    font-variant: normal
+    text-transform: none
+    line-height: 1
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    &::before
+        font-family: 'ementor' !important
+
+$icons: (arrow-down: "e900", arrow-right-mini: "e901", facebook: "e902", instagram: "e903", learn-ae: "e904", learn-animate: "e905", learn-frame: "e906", learn-sound: "e907", minus: "e908", plus: "e909", vk: "e90a")
+
+@each $name, $str in $icons
+    .icon-#{$name}:before
+        content: unquote("\"")+unquote(str-insert($str, "\\", 1))+unquote("\"")

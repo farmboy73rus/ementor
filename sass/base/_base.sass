@@ -1,0 +1,36 @@
+*, :after, :before
+    @include box-sizing(border-box)
+    -webkit-tap-highlight-color: transparent
+
+body
+    overflow-x: hidden
+    scroll-behavior: smooth
+    text-rendering: optimizeSpeed
+    min-height: 100vh
+
+body, p, div, li
+    font-family: $font_family_main
+    font-size: $font_size_main
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd
+    margin: 0
+    padding: 0
+
+.container
+    max-width: $container_width
+    padding-left: $container_padding
+    padding-right: $container_padding
+    margin: 0 auto

@@ -1,0 +1,22 @@
+.btn
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    padding: 0 $button_padding
+    border-radius: 0 $border_radius_md 0 $border_radius_md
+    height: $button_min_height
+    min-width: $button_min_width
+    cursor: pointer
+    @include transition(all 0.5s)
+
+.btn-primary
+    color: $color_white
+    background: $color_primary
+    &:hover
+        background: darken($color_primary, 10%)
+
+.btn-secondary
+    color: $color_white
+    background: $color_secondary
+    &:hover
+        background: darken($color_secondary, 10%)

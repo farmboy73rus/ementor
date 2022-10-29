@@ -1,0 +1,29 @@
+.main-menu
+    display: flex
+    list-style-type: none
+    padding: 40px 0
+    &__main-page
+        justify-content: center
+    &__item
+        display: flex
+        margin: 0 20px
+    &__link
+        line-height: 100%
+        text-decoration: none
+        padding-bottom: 8px
+        position: relative
+        font-weight: 500
+        &::after
+            content: ''
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 50%
+            right: 50%
+            border-bottom: 2px dashed $color_primary
+            @include transition(all 0.3s)
+        &:hover,
+        &.active
+            &::after
+                left: 0
+                right: 0
