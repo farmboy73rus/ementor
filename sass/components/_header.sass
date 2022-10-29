@@ -1,9 +1,54 @@
+.header
+    &__main-page
+        background: $color_secondary
+        padding-bottom: 120px
+        color: $color_white
+    &__social
+
+    &__social-item
+        &:not(:first-child)
+            margin-top: 30px
+    &__content-left-image
+        margin-top: 104px
+    &__social-link
+        color: $color_white
+        font-size: 22px
+        &:hover
+            color: transparentize($color_white, 0.2)
+    &__content
+        display: flex
+    &__content-center
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        flex-grow: 1
+        text-align: center
+    &__title
+        font-weight: 500
+        font-size: 58px
+        line-height: 120%
+        margin-top: 40px
+        max-width: 542px
+    &__content-text
+        line-height: 150%
+        margin: 20px auto 0
+        max-width: 378px
+    &__content-btn
+        margin-top: 50px
+    
 .main-menu
     display: flex
     list-style-type: none
     padding: 40px 0
     &__main-page
         justify-content: center
+
+        & .main-menu__link
+            color: $color_white
+    &.main-menu__main-page
+        padding: 40px 0
+
     &__item
         display: flex
         margin: 0 20px
