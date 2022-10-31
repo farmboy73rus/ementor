@@ -3,6 +3,10 @@
         background: $color_secondary
         padding-bottom: 120px
         color: $color_white
+        & [class$='-link']
+            color: $color_white
+            &:hover
+                color: transparentize($color_white, 0.2)
     &__social
 
     &__social-item
@@ -36,6 +40,20 @@
         max-width: 378px
     &__content-btn
         margin-top: 50px
+    &__content-right
+        position: relative
+    &__down
+        &-container
+            position: absolute
+            bottom: 0
+            right: 0
+            transform: rotate(-180deg)
+            writing-mode: tb-rl
+        &-link
+            .icon-arrow-down
+                margin-bottom: 15px
+                transform: rotate(180deg)
+                display: inline-block
     
 .main-menu
     display: flex
