@@ -18,3 +18,91 @@
             font-size: 14px
             line-height: 120%
             margin-top: 15px
+
+.teachers
+    margin-top: $blocks_gap
+    
+    &-text
+        margin-top: 20px
+        font-weight: 400
+        font-size: 16px
+        line-height: 150%
+
+        p+p
+            margin-top: 24px
+
+    &-button
+        margin-top: 50px
+
+    &-items
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 30px
+
+    &-image
+        width: 170px
+        height: 170px
+
+    &-item
+
+        &:nth-child(1)
+            .teachers-image
+                border-radius: 0px 0px 0px 80px
+
+        &:nth-child(2)
+            .teachers-image
+                border-radius: 80px 0px
+
+        &:nth-child(3)
+            .teachers-image
+                border-radius: 0px 0px 80px 0px
+
+        &:nth-child(4)
+            .teachers-image
+                border-radius: 80px 0px 0px 0px
+
+        &:nth-child(5)
+            .teachers-image
+                border-radius: 0px 0px 80px 0px
+
+        &:nth-child(6)
+            .teachers-image
+                border-radius: 0px 80px 0px 0px
+            
+    &-description
+        margin-top: 14px
+        font-weight: 400
+        font-size: 14px
+        line-height: 130%
+        text-align: center
+
+.courses
+    &-title
+        text-align: center
+        width: 100%
+    &-items
+        margin-top: 60px
+        display: flex
+        flex-wrap: wrap
+        column-gap: 30px
+    &-item
+        padding: 20px
+        box-shadow: 5px 5px 30px rgba(101, 101, 101, 0.12)
+        border-radius: 10px
+    &-name
+        margin-top: 15px
+        font-weight: 500
+        font-size: 16px
+        line-height: 100%
+    &-button 
+        margin-top: 60px
+        margin-left: auto
+        margin-right: auto
+
+.banner
+    &-block
+        background-image: url('../media/images/banner.jpg')
+        background-repeat: no-repeat
+        background-size: cover
+    &-content
+        margin-left: auto

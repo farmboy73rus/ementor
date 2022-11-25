@@ -7,10 +7,14 @@ body
     scroll-behavior: smooth
     text-rendering: optimizeSpeed
     min-height: 100vh
+    color: $color_dark
 
 body, p, div, li
     font-family: $font_family_main
     font-size: $font_size_main
+
+p, div, li
+    color: inherit
 
 body,
 h1,
@@ -18,8 +22,8 @@ h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -35,9 +39,73 @@ a
 
 ul
     list-style-type: none
+
+.link-underline
+    text-decoration: underline
+    &:hover
+        text-decoration: none
         
 .container
     max-width: $container_width
     padding-left: $container_padding
     padding-right: $container_padding
     margin: 0 auto
+
+.section-title
+    font-family: $font_family_main
+    font-weight: 500
+    font-size: 58px
+    line-height: 120%
+
+    &--light
+        color: $color_white
+
+.section-block
+    &--green
+        background: $color_secondary
+        color: $color_white
+
+.section-description
+    font-weight: 400
+    font-size: 16px
+    line-height: 150%
+    margin-top: 20px
+
+.section-button
+    margin-top: 50px
+
+.row
+    display: flex
+    flex-wrap: wrap
+    column-gap: $column_gap
+
+.col-half
+    flex: 0 0 auto
+    width: 100%
+    max-width: 100%
+
+    @media (min-width: 992px)
+        flex: 1 0 auto
+        width: calc(50% - $column_gap/2)
+
+        &:first-child
+            max-width: 500px
+
+.col-12
+    flex: 0 0 auto
+    width: 100%
+
+.col-md-6 
+    @media (min-width: 768px)
+        flex: 0 0 auto
+        width: 50%
+
+.col-lg-4 
+    @media (min-width: 992px)
+        flex: 0 0 auto
+        width: calc(100% / 3)
+
+.col-lg-2
+    @media (min-width: 992px)
+        flex: 0 0 auto
+        width: calc(100% / 6)
