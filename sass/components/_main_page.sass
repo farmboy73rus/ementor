@@ -1,15 +1,22 @@
 .main-content
     section
-        padding: $blocks_gap 0
+        padding: $blocks_gap/2 0
+        @media (min-width: 992px)
+            padding: $blocks_gap 0
 
 .advantages
-    &-block
     &-items
         display: flex
         justify-content: space-between
+        flex-wrap: wrap
         column-gap: 30px
     &-item
         text-align: center
+        width: 100%
+        @media (min-width: 768px)
+            width: calc(50% - 30px)
+        @media (min-width: 992px)
+            width: calc(25% - 30px)
         &__number
             font-weight: 500
             font-size: 58px
@@ -36,14 +43,18 @@
 
     &-items
         display: grid
-        grid-template-columns: repeat(3, 1fr)
         gap: 30px
+        grid-template-columns: repeat(2, 1fr)
+
+        @media (min-width: 992px)
+            grid-template-columns: repeat(3, 1fr)
 
     &-image
         width: 170px
-        height: 170px
+        max-height: 170px
 
     &-item
+        text-align: center
 
         &:nth-child(1)
             .teachers-image
@@ -85,19 +96,31 @@
         display: flex
         flex-wrap: wrap
         column-gap: 30px
+        row-gap: 30px
     &-item
         padding: 20px
         box-shadow: 5px 5px 30px rgba(101, 101, 101, 0.12)
         border-radius: 10px
+        width: 100%
+        text-align: center
+        @media (min-width: 768px)
+            width: calc(50% - 30px)
+        @media (min-width: 992px)
+            width: calc(25% - 30px)
+            text-align: left
+    &-image
+        width: 100%
     &-name
         margin-top: 15px
         font-weight: 500
         font-size: 16px
         line-height: 100%
     &-button 
-        margin-top: 60px
+        margin-top: 30px
         margin-left: auto
         margin-right: auto
+        @media (min-width: 768px)
+            margin-top: 60px
 
 .banner
     &-block

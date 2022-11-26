@@ -10,6 +10,11 @@
 <body>
     <header class="header header__main-page">
         <div class="container">
+            <input id="menu_toggle" type="checkbox" />
+            <label class="main-menu__toggle" for="menu_toggle">
+                <span></span>
+            </label>
+
             <ul class="main-menu main-menu__main-page">
                 <li class="main-menu__item">
                     <a href="" class="main-menu__link">О нас</a>
@@ -156,26 +161,28 @@
         <section class="courses-block section-block">
             <div class="container">
                 <div class="courses row">
-                    <h2 class="section-title courses-title">Популярные курсы</h2>
-                    <ul class="courses-items">
-                        <li class="courses-item">
-                            <img src="media/images/courses_001.png" class="courses-image">
-                            <h3 class="courses-name">Motion design</h3>
-                        </li>
-                        <li class="courses-item">
-                            <img src="media/images/courses_002.png" class="courses-image">
-                            <h3 class="courses-name">Таргет в Instagram</h3>
-                        </li>
-                        <li class="courses-item">
-                            <img src="media/images/courses_003.png" class="courses-image">
-                            <h3 class="courses-name">Эффектные презентации</h3>
-                        </li>
-                        <li class="courses-item">
-                            <img src="media/images/courses_004.png" class="courses-image">
-                            <h3 class="courses-name">SMM-стратегия</h3>
-                        </li>
-                    </ul>
-                    <a href="#" class="section-button btn btn-secondary courses-button">Все курсы</a>
+                    <div class="col-12">
+                        <h2 class="section-title courses-title">Популярные курсы</h2>
+                        <ul class="courses-items">
+                            <li class="courses-item">
+                                <img src="media/images/courses_001.png" class="courses-image">
+                                <h3 class="courses-name">Motion design</h3>
+                            </li>
+                            <li class="courses-item">
+                                <img src="media/images/courses_002.png" class="courses-image">
+                                <h3 class="courses-name">Таргет в Instagram</h3>
+                            </li>
+                            <li class="courses-item">
+                                <img src="media/images/courses_003.png" class="courses-image">
+                                <h3 class="courses-name">Эффектные презентации</h3>
+                            </li>
+                            <li class="courses-item">
+                                <img src="media/images/courses_004.png" class="courses-image">
+                                <h3 class="courses-name">SMM-стратегия</h3>
+                            </li>
+                        </ul>
+                        <a href="#" class="section-button btn btn-secondary courses-button">Все курсы</a>
+                    </div>
                 </div>
             </div>
         </section>

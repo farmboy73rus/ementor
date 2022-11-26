@@ -61,13 +61,23 @@
 
         &__inner
             display: flex
+            flex-wrap: wrap-reverse
+            align-items: center
+            row-gap: 30px
+
+        &__text
+            flex-grow: 1
          
         &__items
             display: flex
-            margin-left: auto
+            flex-wrap: wrap
             column-gap: 30px
         &__link,
         &__text
             font-weight: 400
             font-size: 14px
             line-height: 100%
+
+        &__text,
+        &__item
+            padding: 4px 0

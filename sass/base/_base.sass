@@ -40,6 +40,9 @@ a
 ul
     list-style-type: none
 
+img
+    max-width: 100%
+
 .link-underline
     text-decoration: underline
     &:hover
@@ -54,8 +57,11 @@ ul
 .section-title
     font-family: $font_family_main
     font-weight: 500
-    font-size: 58px
+    font-size: 38px
     line-height: 120%
+
+    @media (min-width: 992px)
+        font-size: 58px
 
     &--light
         color: $color_white
@@ -78,6 +84,7 @@ ul
     display: flex
     flex-wrap: wrap
     column-gap: $column_gap
+    row-gap: 50px
 
 .col-half
     flex: 0 0 auto
