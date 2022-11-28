@@ -1,5 +1,5 @@
 #menu_toggle
-    opacity: 0
+    display: none
 
     &:checked 
         ~ .main-menu__toggle > span
@@ -19,11 +19,11 @@
 .main-menu__toggle
     display: flex
     align-items: center
-    width: 26px
-    height: 26px
+    width: 2.6rem
+    height: 2.6rem
     cursor: pointer
     position: absolute
-    top: 60px
+    top: 6rem
     right: $container_padding
     margin-left: auto
     z-index: 3
@@ -37,19 +37,28 @@
         display: block
         position: absolute
         width: 100%
-        height: 2px
+        height: .2rem
         background-color: $color_white
         @include transition(all 0.3s)
 
     > span::before
         content: ''
-        top: -8px
+        top: -0.8rem
 
     > span::after
         content: ''
-        top: 8px
+        top: -0.8rem
     
 .header
+    &-inner
+        display: flex
+    &-logo
+        &__container
+            padding: 4rem 0
+            margin-right: auto
+        &__image
+            width: 12.8rem
+            height: 1.6rem
     &__image
         @media (max-width: 992px)
             display: none
@@ -57,10 +66,10 @@
             width: 100%
     &__main-page
         background: $color_secondary
-        padding-bottom: 120px
+        padding-bottom: 12rem
         color: $color_white
         @media (max-width: 992px)
-            padding-bottom: 60px
+            padding-bottom: 6rem
         & [class$='-link']
             color: $color_white
             &:hover
@@ -70,12 +79,12 @@
             display: none
     &__social-item
         &:not(:first-child)
-            margin-top: 30px
+            margin-top: 3rem
     &__content-left-image
-        margin-top: 104px
+        margin-top: 10.4rem
     &__social-link
         color: $color_white
-        font-size: 22px
+        font-size: 2.2rem
         &:hover
             color: transparentize($color_white, 0.2)
     &__content
@@ -83,7 +92,7 @@
         @media (max-width: 992px)
             flex-direction: column
             align-items: center
-            padding-top: 60px
+            padding-top: 6rem
     &__content-center
         display: flex
         align-items: center
@@ -91,21 +100,21 @@
         flex-direction: column
         flex-grow: 1
         text-align: center
-        padding: 0 20px
+        padding: 0 2rem
     &__title
-        margin-top: 40px
-        max-width: 542px
+        margin-top: 4rem
+        max-width: 54.2rem
     &__content-text
         color: $color_white
         line-height: 150%
-        margin: 20px auto 0
-        max-width: 378px
+        margin: 2rem auto 0
+        max-width: 37.8rem
     &__content-btn
-        margin-top: 50px
+        margin-top: 5rem
     &__content-right
         position: relative
         @media (max-width: 992px)
-            margin-top: 60px
+            margin-top: 6rem
     &__down
         &-container
             @media (min-width: 992px)
@@ -116,7 +125,7 @@
                 writing-mode: tb-rl
         &-link
             .icon-arrow-down
-                margin-bottom: 15px
+                margin-bottom: 1.5rem
                 display: inline-block
 
                 @media (min-width: 992px)
@@ -126,7 +135,7 @@
 .main-menu
     display: flex
     list-style-type: none
-    padding: 40px 0
+    padding: 4rem 0
 
     @media (max-width: 991px)
         flex-direction: column
@@ -145,22 +154,20 @@
 
         & .main-menu__link
             color: $color_white
-    &.main-menu__main-page
-        padding: 40px 0
 
     &__item
         display: flex
-        margin: 0 20px
+        margin: 0 2rem
         @media (max-width: 991px)
-            margin: 20px 0
+            margin: 2rem 0
     &__link
         line-height: 100%
         text-decoration: none
-        padding-bottom: 8px
         position: relative
         font-weight: 500
         @media (max-width: 991px)
-            font-size: 18px
+            padding-bottom: .8rem
+            font-size: 1.8rem
         &::after
             content: ''
             position: absolute
@@ -168,7 +175,7 @@
             bottom: 0
             left: 50%
             right: 50%
-            border-bottom: 2px dashed $color_primary
+            border-bottom: .2rem dashed $color_primary
             @include transition(all 0.3s)
         &:hover,
         &.active

@@ -2,6 +2,9 @@
     @include box-sizing(border-box)
     -webkit-tap-highlight-color: transparent
 
+html
+    font-size: 10px
+
 body
     overflow-x: hidden
     scroll-behavior: smooth
@@ -57,11 +60,11 @@ img
 .section-title
     font-family: $font_family_main
     font-weight: 500
-    font-size: 38px
+    font-size: 3.8rem
     line-height: 120%
 
     @media (min-width: 992px)
-        font-size: 58px
+        font-size: 5.8rem
 
     &--light
         color: $color_white
@@ -73,18 +76,18 @@ img
 
 .section-description
     font-weight: 400
-    font-size: 16px
+    font-size: 1.6rem
     line-height: 150%
-    margin-top: 20px
+    margin-top: 2rem
 
 .section-button
-    margin-top: 50px
+    margin-top: 5rem
 
 .row
     display: flex
     flex-wrap: wrap
     column-gap: $column_gap
-    row-gap: 50px
+    row-gap: 5rem
 
 .col-half
     flex: 0 0 auto
@@ -96,7 +99,7 @@ img
         width: calc(50% - $column_gap/2)
 
         &:first-child
-            max-width: 500px
+            max-width: 50rem
 
 .col-12
     flex: 0 0 auto
@@ -116,3 +119,22 @@ img
     @media (min-width: 992px)
         flex: 0 0 auto
         width: calc(100% / 6)
+
+.breadcrumbs 
+    margin-top: 1rem
+    & .container
+        display: flex
+    &__link,
+    &__current
+        font-size: $font_size_small
+        line-height: $font_size_small
+    &__link 
+        color: $color_dark
+    &__separator 
+        margin: 0 15px
+        line-height: $font_size_small
+        i
+            font-size: .9rem
+            color: $color_primary
+    &__current 
+        color: transparentize($color_dark, 0.5)

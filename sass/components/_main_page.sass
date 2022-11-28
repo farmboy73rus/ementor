@@ -1,15 +1,16 @@
 .main-content
     section
-        padding: $blocks_gap/2 0
-        @media (min-width: 992px)
-            padding: $blocks_gap 0
+        &:not(.breadcrumbs)
+            padding: $blocks_gap/2 0
+            @media (min-width: 992px)
+                padding: $blocks_gap 0
 
 .advantages
     &-items
         display: flex
         justify-content: space-between
         flex-wrap: wrap
-        column-gap: 30px
+        column-gap: 3rem
     &-item
         text-align: center
         width: 100%
@@ -19,71 +20,71 @@
             width: calc(25% - 30px)
         &__number
             font-weight: 500
-            font-size: 58px
+            font-size: 5.8rem
             color: $color_secondary
         &__description
-            font-size: 14px
+            font-size: 1.4rem
             line-height: 120%
-            margin-top: 15px
+            margin-top: 1.5rem
 
 .teachers
     margin-top: $blocks_gap
     
     &-text
-        margin-top: 20px
+        margin-top: 2rem
         font-weight: 400
-        font-size: 16px
+        font-size: 1.6rem
         line-height: 150%
 
         p+p
-            margin-top: 24px
+            margin-top: 2.4rem
 
     &-button
-        margin-top: 50px
+        margin-top: 5rem
 
     &-items
         display: grid
-        gap: 30px
+        gap: 3rem
         grid-template-columns: repeat(2, 1fr)
 
         @media (min-width: 992px)
             grid-template-columns: repeat(3, 1fr)
 
     &-image
-        width: 170px
-        max-height: 170px
+        width: 17rem
+        max-height: 17rem
 
     &-item
         text-align: center
 
         &:nth-child(1)
             .teachers-image
-                border-radius: 0px 0px 0px 80px
+                border-radius: 0 0 0 8rem
 
         &:nth-child(2)
             .teachers-image
-                border-radius: 80px 0px
+                border-radius: 8rem 0
 
         &:nth-child(3)
             .teachers-image
-                border-radius: 0px 0px 80px 0px
+                border-radius: 0 0 8rem 0
 
         &:nth-child(4)
             .teachers-image
-                border-radius: 80px 0px 0px 0px
+                border-radius: 8rem 0 0 0
 
         &:nth-child(5)
             .teachers-image
-                border-radius: 0px 0px 80px 0px
+                border-radius: 0 0 8rem 0
 
         &:nth-child(6)
             .teachers-image
-                border-radius: 0px 80px 0px 0px
+                border-radius: 0 8rem 0 0
             
     &-description
-        margin-top: 14px
+        margin-top: 1.4rem
         font-weight: 400
-        font-size: 14px
+        font-size: 1.4rem
         line-height: 130%
         text-align: center
 
@@ -92,35 +93,35 @@
         text-align: center
         width: 100%
     &-items
-        margin-top: 60px
+        margin-top: 6rem
         display: flex
         flex-wrap: wrap
-        column-gap: 30px
-        row-gap: 30px
+        column-gap: 3rem
+        row-gap: 3rem
     &-item
-        padding: 20px
-        box-shadow: 5px 5px 30px rgba(101, 101, 101, 0.12)
-        border-radius: 10px
+        padding: 2rem
+        box-shadow: .5rem .5rem 3rem rgba(101, 101, 101, 0.12)
+        border-radius: 1rem
         width: 100%
         text-align: center
         @media (min-width: 768px)
-            width: calc(50% - 30px)
+            width: calc(50% - 3rem)
         @media (min-width: 992px)
-            width: calc(25% - 30px)
+            width: calc(25% - 3rem)
             text-align: left
     &-image
         width: 100%
     &-name
-        margin-top: 15px
+        margin-top: 1.5rem
         font-weight: 500
-        font-size: 16px
+        font-size: 1.6rem
         line-height: 100%
     &-button 
-        margin-top: 30px
+        margin-top: 3rem
         margin-left: auto
         margin-right: auto
         @media (min-width: 768px)
-            margin-top: 60px
+            margin-top: 6rem
 
 .banner
     &-block
