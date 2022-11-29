@@ -46,10 +46,16 @@ ul
 img
     max-width: 100%
 
+.align-center
+    text-align: center
+
 .link-underline
     text-decoration: underline
     &:hover
         text-decoration: none
+
+.pb-8
+    padding-bottom: 8rem
         
 .container
     max-width: $container_width
@@ -81,7 +87,19 @@ img
     margin-top: 2rem
 
 .section-button
-    margin-top: 5rem
+    &__wrapper
+        margin-top: 5rem
+
+.grid-4
+    display: grid  
+    grid-template-columns: 1fr
+    gap: 30px
+
+    @media (min-width: 576px)
+        grid-template-columns: repeat(2, 1fr)
+
+    @media (min-width: 992px)
+        grid-template-columns: repeat(4, 1fr)
 
 .row
     display: flex
@@ -138,3 +156,31 @@ img
             color: $color_primary
     &__current 
         color: transparentize($color_dark, 0.5)
+
+.features
+    &-items 
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        column-gap: 3rem 
+
+    &-item 
+        text-align: center
+        width: 100%
+        @media (min-width: 768px)
+            width: calc(50% - 30px)
+        @media (min-width: 992px)
+            width: calc(25% - 30px)
+
+    &-number
+        font-weight: 500
+        font-size: 5.8rem
+        color: $color_secondary
+
+    &-description
+        font-size: 1.4rem
+        line-height: 120%
+        margin-top: 1.5rem
+
+.hidden
+    display: none !important

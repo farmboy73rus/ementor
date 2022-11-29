@@ -1,20 +1,69 @@
-.course__description
-    &-main
-        max-width: 87rem
+.course-main
+    margin-top: 6rem
+    &__image
         margin-top: 4rem
-    &-text
-        max-width: 81rem
-    &-main 
-        font-weight: 500
-        font-size: 2.2rem
-        line-height: 130%
-    &-text 
-        line-height: 150%
-        margin-top: 2.4rem
-
-        p+p
+        width: 100%
+    &__description
+        &-general
+            max-width: 87rem
+            margin-top: 4rem
+            font-weight: 500
+            font-size: 2.2rem
+            line-height: 130%
+        &-text
+            max-width: 81rem
+            line-height: 150%
             margin-top: 2.4rem
 
-.course__image
-    margin-top: 4rem
-    width: 100%
+            p+p
+                margin-top: 2.4rem
+
+.course-features__item
+    padding-bottom: $blocks_gap
+
+.program-items
+    padding: 6rem 0 0 0
+
+.program-item
+    padding: 2.5rem 1.5rem
+    box-shadow: .5rem .5rem 3rem rgba(101, 101, 101, 0.12)
+    border-radius: 1rem
+    &__header
+        display: flex
+        align-items: center
+
+    &__icon
+        margin-right: 0.8rem
+        color: $color_primary
+        font-size: 1.6rem
+
+    &__description
+        margin-top: 1.5rem
+        font-weight: 400
+        font-size: 1.4rem
+        line-height: 130%
+
+.faq
+    &-items
+        max-width: 83rem
+        margin: 6rem auto 0
+    &-item
+        background: $color_white
+        box-shadow: .5rem .5rem 3rem rgba(101, 101, 101, 0.12)
+        border-radius: 1rem
+        padding: 3rem
+
+        &:not(:last-child)
+            margin-bottom: 3rem
+
+        &__ask
+            margin-right: 1rem
+
+        &__header
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+        &__description
+            margin-top: 1.5rem
+            line-height: 130%

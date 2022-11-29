@@ -1,31 +1,9 @@
 .main-content
     section
-        &:not(.breadcrumbs)
+        &:not(.breadcrumbs):not(.course-features):not(.pb-8)
             padding: $blocks_gap/2 0
             @media (min-width: 992px)
-                padding: $blocks_gap 0
-
-.advantages
-    &-items
-        display: flex
-        justify-content: space-between
-        flex-wrap: wrap
-        column-gap: 3rem
-    &-item
-        text-align: center
-        width: 100%
-        @media (min-width: 768px)
-            width: calc(50% - 30px)
-        @media (min-width: 992px)
-            width: calc(25% - 30px)
-        &__number
-            font-weight: 500
-            font-size: 5.8rem
-            color: $color_secondary
-        &__description
-            font-size: 1.4rem
-            line-height: 120%
-            margin-top: 1.5rem
+                padding: $blocks_gap 0   
 
 .teachers
     margin-top: $blocks_gap
@@ -118,15 +96,17 @@
         line-height: 100%
     &-button 
         margin-top: 3rem
-        margin-left: auto
-        margin-right: auto
         @media (min-width: 768px)
             margin-top: 6rem
 
 .banner
-    &-block
+    background-repeat: no-repeat
+    background-size: cover
+    &__main-page
         background-image: url('../media/images/banner.jpg')
-        background-repeat: no-repeat
-        background-size: cover
+    &__course-page
+        background-image: url('../media/images/course_page_banner.jpg')
     &-content
         margin-left: auto
+    &-button 
+        margin-top: 5rem
