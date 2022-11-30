@@ -46,6 +46,9 @@ ul
 img
     max-width: 100%
 
+.no-scroll
+    overflow: hidden
+
 .align-center
     text-align: center
 
@@ -66,8 +69,11 @@ img
 .section-title
     font-family: $font_family_main
     font-weight: 500
-    font-size: 3.8rem
+    font-size: 2.8rem
     line-height: 120%
+
+    @media (min-width: 480px)
+        font-size: 3.8rem
 
     @media (min-width: 992px)
         font-size: 5.8rem
@@ -76,6 +82,12 @@ img
         color: $color_white
 
 .section-block
+    padding: $blocks_gap/2 0
+    @media (min-width: 992px)
+        padding: $blocks_gap 0
+    &:not(&--green):not(.banner)
+        & + &
+            padding-top: 0
     &--green
         background: $color_secondary
         color: $color_white
@@ -88,7 +100,14 @@ img
 
 .section-button
     &__wrapper
-        margin-top: 5rem
+        margin-top: 3rem
+        &:not(.align-center)
+            text-align: center
+            @media (min-width: 992px)
+                text-align: left
+            
+        @media (min-width: 992px)
+            margin-top: 5rem
 
 .grid-4
     display: grid  
@@ -105,7 +124,9 @@ img
     display: flex
     flex-wrap: wrap
     column-gap: $column_gap
-    row-gap: 5rem
+    row-gap: 3rem
+    @media (min-width: 992px)
+        row-gap: 5rem
 
 .col-half
     flex: 0 0 auto
@@ -113,11 +134,15 @@ img
     max-width: 100%
 
     @media (min-width: 992px)
-        flex: 1 0 auto
         width: calc(50% - $column_gap/2)
 
         &:first-child
             max-width: 50rem
+
+.col-image
+    text-align: center
+    @media (min-width: 992px)
+        text-align: left
 
 .col-12
     flex: 0 0 auto
@@ -156,6 +181,9 @@ img
             color: $color_primary
     &__current 
         color: transparentize($color_dark, 0.5)
+
+    & + .section-block
+        padding-top: 0
 
 .features
     &-items 

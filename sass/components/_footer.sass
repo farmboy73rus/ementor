@@ -1,30 +1,40 @@
 .footer
     &-row 
         column-gap: 0
+        text-align: center
+        @media (min-width: 992px)
+            text-align: left
     &-general
-        padding: 80px 0 50px 0
+        padding: 4rem 0 2rem 0
         border-top: 1px solid transparentize($color_dark, 0.9)
+        @media (min-width: 992px)
+            padding: 8rem 0 5rem 0
 
     &__main-page
-        margin-top: $blocks_gap
+        margin-top: 0
+        @media (min-width: 992px)
+            margin-top: $blocks_gap
     &-main 
-        padding-right: $column_gap
-    &-logo
-        &-link
-        &__image 
+        padding-right: 0
+        @media (min-width: 992px)
+            padding-right: $column_gap
 
     &-description
-        margin-top: 30px
+        margin-top: 3rem
         font-weight: 400
-        font-size: 14px
+        font-size: $font_size_small
         line-height: 130%
     &-social 
         &__items
-            margin-top: 50px
             display: flex
-            column-gap: 25px
+            justify-content: center
+            column-gap: 2.5rem
+            margin-top: 2rem
+            @media (min-width: 992px)
+                justify-content: start
+                margin-top: 5rem
         &__link
-            font-size: 22px
+            font-size: 2.2rem
             color: transparentize($color_dark, 0.7)
 
             &:hover
@@ -32,17 +42,17 @@
 
     &-header
         font-weight: 500
-        font-size: 16px
+        font-size: $font_size_main
         line-height: 100%
 
     &-menu
-        margin-top: 31px
+        margin-top: 3.1rem
         &__item
             &:not(:first-child)
-                margin-top: 20px
+                margin-top: 2rem
         &__link
             font-weight: 400
-            font-size: 16px
+            font-size: $font_size_main
             line-height: 100%
             color: $color_dark
             
@@ -50,9 +60,9 @@
                 color: transparentize($color_dark, 0.2)
 
     &-text
-        margin-top: 31px
+        margin-top: 3.1rem
         font-weight: 400
-        font-size: 16px
+        font-size: $font_size_main
         line-height: 130%
     
     &-copyright
@@ -71,13 +81,19 @@
         &__items
             display: flex
             flex-wrap: wrap
+            justify-content: center
             column-gap: 3rem
+            @media (min-width: 992px)
+                justify-content: start
         &__link,
         &__text
             font-weight: 400
-            font-size: 1.4rem
+            font-size: $font_size_small
             line-height: 100%
 
         &__text,
         &__item
             padding: .4rem 0
+            text-align: center
+            @media (min-width: 992px)
+                text-align: left

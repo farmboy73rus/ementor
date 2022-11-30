@@ -1,12 +1,7 @@
-.main-content
-    section
-        &:not(.breadcrumbs):not(.course-features):not(.pb-8)
-            padding: $blocks_gap/2 0
-            @media (min-width: 992px)
-                padding: $blocks_gap 0   
-
 .teachers
-    margin-top: $blocks_gap
+    margin-top: $blocks_gap/2
+    @media (min-width: 992px)
+        margin-top: $blocks_gap
     
     &-text
         margin-top: 2rem
@@ -16,9 +11,6 @@
 
         p+p
             margin-top: 2.4rem
-
-    &-button
-        margin-top: 5rem
 
     &-items
         display: grid
@@ -94,19 +86,24 @@
         font-weight: 500
         font-size: 1.6rem
         line-height: 100%
-    &-button 
-        margin-top: 3rem
-        @media (min-width: 768px)
-            margin-top: 6rem
 
 .banner
     background-repeat: no-repeat
     background-size: cover
-    &__main-page
-        background-image: url('../media/images/banner.jpg')
+    position: relative
+    overflow: hidden
+
+    &-block__image
+        position: static
+        @media (min-width: 992px)
+            position: absolute
+            left: 0
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+            z-index: -1
+
     &__course-page
         background-image: url('../media/images/course_page_banner.jpg')
     &-content
         margin-left: auto
-    &-button 
-        margin-top: 5rem

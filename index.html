@@ -11,7 +11,7 @@
     <header class="header header__main-page">
         <div class="container">
             <input id="menu_toggle" type="checkbox" />
-            <label class="main-menu__toggle" for="menu_toggle">
+            <label class="main-menu__toggle main-menu__toggle-light" for="menu_toggle">
                 <span></span>
             </label>
 
@@ -113,7 +113,9 @@
                             <p>Наши преподаватели – профессионалы, которые добились успеха в своей области. Лид-дизайнеры известных студий, маркетологи крупнейших компаний, редакторы популярных медиа: получайте опыт из первых рук, в любое время.</p>
                             <p>Кураторы курсов – наши лучшие выпускники, будут помогать и поддерживать вас на протяжении всего обучения.</p>
                         </div>
-                        <a href="#!" class="section-button btn btn-secondary teachers-button">Все преподаватели</a>
+                        <div class="section-button__wrapper">
+                            <a href="#!" class="section-button btn btn-secondary teachers-button">Все преподаватели</a>
+                        </div>
                     </div>
                     <div class="teachers-items col-half">
                         <div class="teachers-item">
@@ -144,16 +146,18 @@
                 </div>
             </div>
         </section>
-        <section class="format-block section-block--green">
+        <section class="format-block section-block section-block--green">
             <div class="container">
                 <div class="format row">
-                    <div class="format-image__wrapper col-half">
+                    <div class="format-image__wrapper col-half col-image">
                         <img src="media/images/format-img.png" class="format-image">
                     </div>
                     <div class="format-content col-half">
                         <h2 class="section-title format-title">Выбирайте свой формат обучения</h2>
                         <div class="section-description format-description">Смотрите видео-лекции в удобное для вас время, обучайтесь на тренажере, участвуйте в интенсивных воркшопах с командой или проходите курс с гибким расписанием. На нашей платформе каждый найдет подходящий формат.</div>
-                        <a href="#" class="section-button btn btn-primary format-button">Все курсы</a>
+                        <div class="section-button__wrapper">
+                            <a href="#" class="section-button btn btn-primary format-button">Все курсы</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -181,7 +185,7 @@
                                 <h3 class="courses-name">SMM-стратегия</h3>
                             </li>
                         </ul>
-                        <div class="section-button__wrapper">
+                        <div class="section-button__wrapper align-center">
                             <a href="#" class="section-button btn btn-secondary courses-button">Все курсы</a>
                         </div>
                     </div>
@@ -191,10 +195,13 @@
         <section class="banner section-block banner__main-page">
             <div class="container">
                 <div class="banner-block row">
+                    <img class="banner-block__image" src="media/images/banner.jpg">
                     <div class="banner-content col-half">
                         <h2 class="section-title banner-title">Присоединяйтесь к E-Mentor сейчас</h2>
                         <div class="section-description banner-description">Выберите подходящий тариф и формат обучения, пройдите 2 урока и мы подарим вам дополнительные лекции по любому направлению бесплатно!</div>
-                        <a href="#" class="section-button btn btn-primary banner-button">Выбрать тариф</a>
+                        <div class="section-button__wrapper">
+                            <a href="#" class="section-button btn btn-primary banner-button">Выбрать тариф</a>
+                        </div>
                     </div>
                 </div>
             </div>

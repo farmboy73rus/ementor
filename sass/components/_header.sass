@@ -38,7 +38,7 @@
         position: absolute
         width: 100%
         height: .2rem
-        background-color: $color_white
+        background-color: $color_dark
         @include transition(all 0.3s)
 
     > span::before
@@ -47,7 +47,13 @@
 
     > span::after
         content: ''
-        top: -0.8rem
+        top: 0.8rem
+
+    &.main-menu__toggle-light
+        > span,
+          span::before,
+          span::after
+            background-color: $color_white
     
 .header
     &-inner
@@ -110,10 +116,13 @@
         margin: 2rem auto 0
         max-width: 37.8rem
     &__content-btn
-        margin-top: 5rem
+        margin-top: 3rem
+        @media (min-width: 992px)
+            margin-top: 5rem
     &__content-right
         position: relative
-        @media (max-width: 992px)
+        margin-top: 3rem
+        @media (min-width: 992px)
             margin-top: 6rem
     &__down
         &-container
@@ -130,7 +139,6 @@
 
                 @media (min-width: 992px)
                     transform: rotate(180deg)
-
     
 .main-menu
     display: flex
@@ -150,7 +158,8 @@
         @include transition(all 0.3s)
 
     &__main-page
-        justify-content: center
+        @media (min-width: 992px)
+            justify-content: center
 
         & .main-menu__link
             color: $color_white
