@@ -22,9 +22,7 @@
     width: 2.6rem
     height: 2.6rem
     cursor: pointer
-    position: absolute
-    top: 6rem
-    right: $container_padding
+    position: relative
     margin-left: auto
     z-index: 3
 
@@ -56,11 +54,27 @@
             background-color: $color_white
     
 .header
+    &.header__main-page
+        .main-menu__toggle
+            position: absolute
+            top: 6rem
+            right: $container_padding
+
+    &:not(.header__main-page)
+        #menu_toggle
+            &:checked
+                ~ .main-menu__toggle
+                     > span,
+                       span::before,
+                       span::after
+                            background-color: $color_white
+
     &-inner
         display: flex
+        align-items: center
+        height: 10rem
     &-logo
         &__container
-            padding: 4rem 0
             margin-right: auto
         &__image
             width: 12.8rem
@@ -133,6 +147,7 @@
                 transform: rotate(-180deg)
                 writing-mode: tb-rl
         &-link
+            color: $color_white
             .icon-arrow-down
                 margin-bottom: 1.5rem
                 display: inline-block
@@ -177,6 +192,7 @@
         @media (max-width: 991px)
             padding-bottom: .8rem
             font-size: 1.8rem
+            color: $color_white
         &::after
             content: ''
             position: absolute
